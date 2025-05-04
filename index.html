@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CodeStart — учись кодить</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>CodeStart</h1>
+  <p>Платформа для обучения программированию</p>
+  <nav>
+    <a href="#home">Главная</a>
+    <a href="#courses">Курсы</a>
+    <a href="#compiler">Компилятор</a>
+    <a href="#community">Сообщество</a>
+    <a href="#login">Вход/Регистрация</a>
+  </nav>
+</header>
+
+<main>
+  <div id="home" class="page">
+    <section>
+      <h2>Добро пожаловать на CodeStart!</h2>
+      <p>Начните свой путь в программировании с нашей платформой. Мы предлагаем интерактивные курсы, встроенный компилятор и активное сообщество для поддержки вашего обучения.</p>
+      <p>Независимо от вашего уровня подготовки, у нас есть всё, чтобы вы могли освоить программирование с нуля или улучшить свои навыки.</p>
+    </section>
+
+    <section>
+      <h2>Популярные курсы</h2>
+      <ul>
+        <li><a href="#course-python">Python для начинающих</a> — Освойте основы одного из самых популярных языков программирования.</li>
+        <li><a href="#course-js">JavaScript: интерактивность на сайте</a> — Научитесь добавлять динамику на веб-страницы.</li>
+        <li><a href="#course-html-css">HTML + CSS с нуля</a> — Создайте свой первый сайт с помощью базовых веб-технологий.</li>
+      </ul>
+      <button onclick="showPage('courses')">Посмотреть все курсы</button>
+    </section>
+
+    <section>
+      <h2>Почему выбирают CodeStart?</h2>
+      <ul>
+        <li>Интерактивные уроки с мгновенной обратной связью</li>
+        <li>Встроенный компилятор для практики в реальном времени</li>
+        <li>Активное сообщество и поддержка менторов</li>
+        <li>Гибкие тарифы для всех категорий пользователей</li>
+        <li>Регулярные обновления курсов и материалов</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Отзывы пользователей</h2>
+      <div class="testimonial">
+        <p>"CodeStart помог мне освоить Python за месяц! Встроенный компилятор — это просто находка."</p>
+        <p>— Алексей, студент</p>
+      </div>
+      <div class="testimonial">
+        <p>"Благодаря геймификации я не пропустил ни одного урока. Очень мотивирует!"</p>
+        <p>— Мария, начинающий разработчик</p>
+      </div>
+      <div class="testimonial">
+        <p>"Сообщество всегда готово помочь, а курсы структурированы и понятны."</p>
+        <p>— Иван, фрилансер</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Что вы получите?</h2>
+      <p>Присоединяйтесь к CodeStart и откройте для себя:</p>
+      <ul>
+        <li>Доступ к более чем 20 курсам по программированию</li>
+        <li>Практические задания с проверкой кода</li>
+        <li>Сертификаты по окончании курсов</li>
+        <li>Возможность общаться с единомышленниками</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Начните обучение прямо сейчас!</h2>
+      <p>Зарегистрируйтесь и получите доступ к бесплатным курсам и материалам. Ваш первый шаг к карьере в IT начинается здесь!</p>
+      <button onclick="showPage('register')">Зарегистрироваться</button>
+      <p>Уже есть аккаунт? <a href="#login">Войти</a></p>
+    </section>
+  </div>
+
+  <div id="courses" class="page">
+    <section>
+      <h2>Курсы</h2>
+      <ul>
+        <li><a href="#course-python">Python для начинающих</a></li>
+        <li><a href="#course-js">JavaScript: интерактивность на сайте</a></li>
+        <li><a href="#course-html-css">HTML + CSS с нуля</a></li>
+        <li><a href="#course-cybersecurity">Кибербезопасность: основы</a></li>
+        <li><a href="#course-testing">Тестирование ПО</a></li>
+      </ul>
+      <button onclick="showPage('home')">Назад на главную</button>
+    </section>
+  </div>
+
+  <div id="course-python" class="page course-page">
+    <section>
+      <h2>Python для начинающих</h2>
+      <p>В этом курсе вы научитесь основам программирования на Python, одному из самых популярных языков в мире.</p>
+      <h3>Содержание курса</h3>
+      <ul>
+        <li>Урок 1: Введение в Python</li>
+        <li>Урок 2: Переменные и типы данных</li>
+        <li>Урок 3: Условные операторы</li>
+        <li>Урок 4: Циклы</li>
+        <li>Урок 5: Функции</li>
+      </ul>
+      <button onclick="enrollCourse()">Записаться на курс</button>
+    </section>
+  </div>
+
+  <div id="course-js" class="page course-page">
+    <section>
+      <h2>JavaScript: интерактивность на сайте</h2>
+      <p>Научитесь добавлять интерактивность на веб-страницы с помощью JavaScript.</p>
+      <h3>Содержание курса</h3>
+      <ul>
+        <li>Урок 1: Основы JavaScript</li>
+        <li>Урок 2: Работа с DOM</li>
+        <li>Урок 3: События</li>
+        <li>Урок 4: AJAX и API</li>
+      </ul>
+      <button onclick="enrollCourse()">Записаться на курс</button>
+    </section>
+  </div>
+
+  <div id="course-html-css" class="page course-page">
+    <section>
+      <h2>HTML + CSS с нуля</h2>
+      <p>Освойте основы веб-разработки, изучив HTML и CSS.</p>
+      <h3>Содержание курса</h3>
+      <ul>
+        <li>Урок 1: Введение в HTML</li>
+        <li>Урок 2: Основы CSS</li>
+        <li>Урок 3: Работа с формами</li>
+        <li>Урок 4: Адаптивный дизайн</li>
+      </ul>
+      <button onclick="enrollCourse()">Записаться на курс</button>
+    </section>
+  </div>
+
+  <div id="course-cybersecurity" class="page course-page">
+    <section>
+      <h2>Кибербезопасность: основы</h2>
+      <p>Узнайте, как защитить свои данные и системы от киберугроз.</p>
+      <h3>Содержание курса</h3>
+      <ul>
+        <li>Урок 1: Введение в кибербезопасность</li>
+        <li>Урок 2: Основные угрозы</li>
+        <li>Урок 3: Защита данных</li>
+        <li>Урок 4: Безопасность в сети</li>
+      </ul>
+      <button onclick="enrollCourse()">Записаться на курс</button>
+    </section>
+  </div>
+
+  <div id="course-testing" class="page course-page">
+    <section>
+      <h2>Тестирование ПО</h2>
+      <p>Научитесь тестировать программное обеспечение и обеспечивать его качество.</p>
+      <h3>Содержание курса</h3>
+      <ul>
+        <li>Урок 1: Введение в тестирование</li>
+        <li>Урок 2: Виды тестирования</li>
+        <li>Урок 3: Автоматизация тестирования</li>
+        <li>Урок 4: Тестирование безопасности</li>
+      </ul>
+      <button onclick="enrollCourse()">Записаться на курс</button>
+    </section>
+  </div>
+
+  <div id="compiler" class="page">
+    <section>
+      <h2>Попробуй компилятор</h2>
+      <textarea id="code">// console.log("Привет, мир!")</textarea>
+      <button onclick="runCode()">▶ Запустить</button>
+      <pre id="output" class="output"></pre>
+    </section>
+  </div>
+
+  <div id="community" class="page">
+    <section>
+      <h2>Сообщество</h2>
+      <div class="forum">
+        <div class="forum-post">
+          <h3>Как начать изучать Python?</h3>
+          <p>Автор: User123</p>
+          <p>Я новичок в программировании. С чего мне начать?</p>
+          <button onclick="replyToPost()">Ответить</button>
+        </div>
+        <div class="forum-post">
+          <h3>Советы по JavaScript</h3>
+          <p>Автор: JSFan</p>
+          <p>Какие ресурсы посоветуете для углубленного изучения JS?</p>
+          <button onclick="replyToPost()">Ответить</button>
+        </div>
+        <div class="forum-input">
+          <h3>Добавить новый пост</h3>
+          <input type="text" placeholder="Заголовок" />
+          <textarea placeholder="Ваш вопрос или сообщение"></textarea>
+          <button onclick="addPost()">Опубликовать</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="login" class="page">
+    <section>
+      <h2>Вход</h2>
+      <form>
+        <label>Логин: <input type="text"></label>
+        <label>Пароль: <input type="password"></label>
+        <button type="button" onclick="login()">Войти</button>
+      </form>
+      <p>Нет аккаунта? <a href="#register">Зарегистрироваться</a></p>
+    </section>
+  </div>
+
+  <div id="register" class="page">
+    <section>
+      <h2>Регистрация</h2>
+      <form>
+        <label>Логин: <input type="text"></label>
+        <label>Пароль: <input type="password"></label>
+        <label>Электронная почта: <input type="email"></label>
+        <button type="button" onclick="register()">Зарегистрироваться</button>
+      </form>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 CodeStart. Сделано с <span>❤</span> для будущих программистов</p>
+</footer>
+
+<script>
+let isLoggedIn = false;
+
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(page => {
+    if (page.id === pageId) {
+      page.style.display = 'block';
+    } else {
+      page.style.display = 'none';
+    }
+  });
+}
+
+function login() {
+  isLoggedIn = true;
+  showPage('home');
+}
+
+function register() {
+  alert('Регистрация прошла успешно! Теперь вы можете войти.');
+  showPage('login');
+}
+
+function runCode() {
+  const code = document.getElementById('code').value;
+  const output = document.getElementById('output');
+  try {
+    const result = eval(code);
+    output.textContent = result !== undefined ? result : '✓ Выполнено';
+  } catch (e) {
+    output.textContent = "Ошибка: " + e.message;
+  }
+}
+
+function enrollCourse() {
+  if (!isLoggedIn) {
+    showPage('register');
+  } else {
+    alert('Вы успешно записались на курс!');
+  }
+}
+
+function replyToPost() {
+  alert('Функция ответа на пост будет реализована в будущем.');
+}
+
+function addPost() {
+  alert('Функция добавления поста будет реализована в будущем.');
+}
+
+function showPageFromHash() {
+  const hash = window.location.hash.substring(1);
+  if (hash) {
+    showPage(hash);
+  } else {
+    showPage('home');
+  }
+}
+
+window.addEventListener('load', showPageFromHash);
+window.addEventListener('hashchange', showPageFromHash);
+</script>
+
+<style>
+  a {
+    color: #c0dfff; /* Новый цвет текста ссылок для лучшего контраста */
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #e6f3ff; /* Светлее при наведении */
+  }
+</style>
+
+</body>
+</html>
